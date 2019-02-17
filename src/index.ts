@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+
 const program = require('commander');
 const shell = require('shelljs')
 import { run } from './program'; 

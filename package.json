@@ -1,10 +1,10 @@
 {
-  "name": "knit",
+  "name": "@olaven/knit",
   "version": "0.0.1",
   "description": "Automatically upload project to git repo",
   "main": "build/index.js",
   "scripts": {
-    "start": "node build/index.js",
+    "start": "yarn build && node build/index.js",
     "build": "tsc"
   },
   "author": "@olaven",
@@ -12,12 +12,12 @@
   "devDependencies": {
     "@types/commander": "^2.12.2",
     "@types/shelljs": "^0.8.3",
-    "typescript": "^3.3.3"
-  },
-  "dependencies": {
     "@types/load-json-file": "^2.0.7",
     "@types/node": "^11.9.4",
     "@types/write-json-file": "^2.2.1",
+    "typescript": "^3.3.3"
+  },
+  "dependencies": {
     "app-root-path": "^2.1.0",
     "commander": "^2.19.0",
     "load-json-file": "^5.2.0",
