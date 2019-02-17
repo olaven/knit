@@ -6,9 +6,9 @@ Your project on Github in 20 seconds.
 
 
 ## Basic usage 
-* create a [new project](https://github.com/new) with same name as your folder
-* go to your local project folder 
-* simply run `knit`. 
+* create a [new project](https://github.com/new) with same name as your local project folder
+* simply run `knit` in your local project folder
+
   
 ## First time configuration
 `knit --user  <your-user-name>`
