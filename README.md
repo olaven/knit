@@ -2,7 +2,7 @@
 Your project on Github in 20 seconds. 
 
 ## Installation 
-`yarn global add knit` _or_ `npm install -g knit`
+`yarn global add @olaven/knit` _or_ `npm install -g @olaven/knit`
 
 
 ## Basic usage 
