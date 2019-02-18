@@ -7,6 +7,9 @@
     "start": "yarn build && node build/index.js",
     "build": "tsc"
   },
+  "bin": {
+    "knit": "./build/index.js"
+  },
   "author": "@olaven",
   "license": "MIT",
   "devDependencies": {
