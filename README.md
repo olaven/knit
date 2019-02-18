@@ -1,5 +1,5 @@
 # Knit 🧶
-Your project on Github in 20 seconds. 
+Upload local project to emtpy repository. 
 
 ## Installation 
 `yarn global add @olaven/knit` _or_ `npm install -g @olaven/knit`
@@ -12,6 +12,3 @@ Your project on Github in 20 seconds.
   
 ## First time configuration
 `knit --user  <your-user-name>`
-olaven
-olaven
-olaven
