@@ -11,4 +11,4 @@ Your project on Github in 20 seconds.
 
   
 ## First time configuration
-`knit --user  <your-user-name>`
+`knit --user  <your-user-name>`olaven
