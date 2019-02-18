@@ -1,0 +1,2 @@
+# only the build is relevant on npm, opposite of .gigitnore. 
+/src

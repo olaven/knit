@@ -9,7 +9,7 @@ export const knit = () => {
         
         execute([
             'git init',
-            'echo ' + config.user + ' >> README.md',
+            'echo ## 🧶 >> README.md',
             'git add .',
             'git commit -m "first commit"',
             'git remote add origin ' + config.remote,
