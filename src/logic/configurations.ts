@@ -1,11 +1,13 @@
-const path = require('path') 
-const root = require('app-root-path')
-import { stat, writeFile, statSync } from 'fs'; 
+const path = require('path') ;
+const os = require('os');
+const root = require('app-root-path');
+import { writeFile, statSync } from 'fs'; 
 import writeJsonFile from 'write-json-file'; 
 import loadJsonFile from 'load-json-file'
 
 
-const toFile: string = path.resolve("config.json"); 
+// const toFile: string = path.resolve("config.json"); 
+const toFile: string = path.resolve(os.homedir(), "knit_config.json")
 
 export const createConfigIfMissing = async () => {
     if (configMissing()) {
@@ -51,7 +53,6 @@ const configMissing = (): boolean => {
 }
 
 const createConfig = async () => {
-    
     const json = "{}";
     
     writeFile(toFile, json, error => {

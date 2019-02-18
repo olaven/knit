@@ -6,7 +6,7 @@ export const knit = () => {
 
     
     getConfig().then(config => {
-        console.log("THIS IS MY REMOTE: ", config.remote); 
+        
         execute([
             'git init',
             'echo ' + config.user + ' >> README.md',
