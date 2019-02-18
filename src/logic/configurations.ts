@@ -7,7 +7,7 @@ import loadJsonFile from 'load-json-file'
 
 
 // const toFile: string = path.resolve("config.json"); 
-const toFile: string = path.resolve(os.homedir(), "knit_config.json")
+const toFile: string = path.resolve(os.homedir(), ".knit_config.json")
 
 export const createConfigIfMissing = async () => {
     if (configMissing()) {
