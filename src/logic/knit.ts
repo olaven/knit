@@ -1,21 +1,19 @@
 const shell = require('shelljs')
-import { getConfig } from './configurations'
+import { getRemote } from './configurations'
 
 
-export const knit = () => {
+export const knit = async () => {
 
-    
-    getConfig().then(config => {
-        
-        execute([
-            'git init',
-            'echo ## 🧶 >> README.md',
-            'git add .',
-            'git commit -m "first commit"',
-            'git remote add origin ' + config.remote,
-            'git push -u origin master'
-        ]);
-    })
+    const remote = await getRemote(); 
+    console.log("HELLO HELLO HELLO", remote)
+    execute([
+        'git init',
+        'echo ## 🧶 >> README.md',
+        'git add .',
+        'git commit -m "first commit"',
+        'git remote add origin ' + remote, 
+        'git push -u origin master'
+    ]);
 }
 
 
@@ -25,4 +23,5 @@ const execute = (commands: string[]) => {
         shell.exec(command);
     }
 }
+
 

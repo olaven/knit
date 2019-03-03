@@ -1,6 +1,6 @@
 {
   "name": "@olaven/knit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Automatically upload project to git repo",
   "repository": "https://github.com/olaven/knit",
   "main": "build/index.js",
@@ -22,7 +22,9 @@
     "typescript": "^3.3.3"
   },
   "dependencies": {
+    "@types/jest": "^24.0.9",
     "commander": "^2.19.0",
+    "jest": "^24.1.0",
     "load-json-file": "^5.2.0",
     "shelljs": "^0.8.3",
     "write-json-file": "^3.1.0"

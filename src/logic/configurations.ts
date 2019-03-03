@@ -9,32 +9,32 @@ const toFile: string = path.resolve(os.homedir(), ".knit_config.json")
 
 export const createConfigIfMissing = async () => {
     if (configMissing()) {
-        createConfig(); 
+        createConfigFile(); 
     }
 }
 
 
 export const setConfig = async (user: string) => {
     
-    const config = await getConfig()
     
-    const splittedRoot = process.cwd().split('/'); 
-    const name = splittedRoot[splittedRoot.length - 1]; 
-
-    config.user = user;
-    config.remote = 'https://github.com/' + user + "/" + name + ".git";
-
-    await writeJsonFile(toFile, config)
+    await writeJsonFile(toFile, {user: user})
 }
 
-export const getConfig = async (): Promise<Config> =>  {
-    
-    const config = await loadJsonFile(toFile) as Config
-    
-    const user = config.user
-    const remote = config.remote
+export const getRemote = async (): Promise<string> =>  {
 
-    return new Config(user, remote)
+    const config = await getConfig(); 
+    const user = config.user; 
+
+    const splittedRoot = process.cwd().split('/');
+    const name = splittedRoot[splittedRoot.length - 1];
+
+    return 'https://github.com/' + user + "/" + name + ".git"
+}
+
+export const getConfig = async (): Promise<Config> => {
+
+    const config = await loadJsonFile(toFile) as Config; 
+    return config; 
 }
 
 const configMissing = (): boolean => {
@@ -49,7 +49,9 @@ const configMissing = (): boolean => {
     return false; 
 }
 
-const createConfig = async () => {
+
+
+const createConfigFile = async () => {
     const json = "{}";
     
     writeFile(toFile, json, error => {
@@ -61,11 +63,8 @@ const createConfig = async () => {
 class Config {
 
     user: string; 
-    remote: string 
 
-    // https://github.com/user/repo.git
-    constructor(user: string, remote: string) {
+    constructor(user: string) {
         this.user = user; 
-        this.remote = remote
     }   
 }
